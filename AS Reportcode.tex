@@ -1,0 +1,218 @@
+\documentclass[11pt,a4paper]{article}
+
+% ------------------------------------------------
+% Packages
+% ------------------------------------------------
+\usepackage[margin=1in]{geometry}
+\usepackage{graphicx}
+\usepackage{booktabs}
+\usepackage{array}
+\usepackage{caption}
+\usepackage{subcaption}
+\usepackage{float}
+\usepackage{hyperref}
+\usepackage{enumitem}
+\usepackage{xcolor}
+\usepackage{titlesec}
+\usepackage{setspace}
+
+% ------------------------------------------------
+% Hyperlink setup
+% ------------------------------------------------
+\hypersetup{
+  colorlinks=true,
+  linkcolor=black,
+  urlcolor=blue,
+  citecolor=black,
+  pdfauthor={},
+  pdftitle={Business Insights Report}
+}
+
+% ------------------------------------------------
+% Graphics path (put your images in /images)
+% ------------------------------------------------
+\graphicspath{images/}
+
+% ------------------------------------------------
+% Title formatting
+% ------------------------------------------------
+\titleformat{\section}{\large\bfseries}{\thesection.}{0.5em}{}
+\titleformat{\subsection}{\normalsize\bfseries}{\thesubsection}{0.5em}{}
+\setlist[itemize]{topsep=4pt,itemsep=2pt,parsep=2pt}
+
+% ------------------------------------------------
+% Title page info
+% ------------------------------------------------
+\newcommand{\reporttitle}{Business Insights Report}
+\newcommand{\reportsubtitle}{Supply Chain Performance \& Risk}
+\newcommand{\reportauthor}{HARISH SHINTRE AND RASSIM}
+\newcommand{\reportdate}{\today}
+% Document
+\begin{document}
+
+% -------- Title Page --------
+\begin{titlepage}
+    \vspace*{-1.5cm}
+    \begin{center}
+        \includegraphics[width=6cm]{logo.png} % <-- Upload your logo as logo.png
+    \end{center}
+
+    \vspace*{2cm}
+    {\Huge \textbf{\reporttitle}\par}
+    \vspace{0.5em}
+    {\Large \reportsubtitle\par}
+
+\vspace{2cm}
+    {\large \reportauthor\par}
+    {\large \reportdate\par}
+
+  \vspace{2cm}
+
+    \begin{flushleft}
+    \textbf{Executive Summary}\\[0.5em]
+    This report analyzes revenue and profitability by category, region, and customer segment; evaluates delivery performance and risk drivers; highlights product and departmental performance; assesses shipping mode impacts on profit and satisfaction; and outlines fraud/return risk considerations informed by payment behavior.
+    \end{flushleft}
+\end{titlepage}
+
+\tableofcontents
+\thispagestyle{empty}
+\clearpage
+\setcounter{page}{1}
+
+% -------- 1. Revenue & Profitability Analysis --------
+\section{Revenue \& Profitability Analysis}
+
+This section examines which product categories, regions, and customer segments generate the highest revenue and profit.
+
+\subsection{Product Categories}
+The \textbf{Fishing} category is the strongest performer, generating the highest total sales and profit among all categories. Other key contributors include \textbf{Camping \& Hiking} and \textbf{Women’s Apparel}, which also show strong profitability. Categories such as \textbf{Garden} and \textbf{Crafts} contribute significantly less in comparison.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=\linewidth]{by_category.JPG}
+    \caption{Sales \& Profit by Category.}
+    \label{fig:img1}
+\end{figure}
+
+\subsection{Regional/Market Performance}
+\textbf{Europe} and \textbf{LATAM} are the highest-revenue markets, followed by \textbf{Pacific Asia}. When evaluating profit by country, the \textbf{United States} stands out with the largest profit contribution, followed by \textbf{France} and \textbf{Mexico}.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=\linewidth]{by_region.JPG}
+    \caption{Sales by Market \& Profit by Country.}
+    \label{fig:img4}
+\end{figure}
+
+\subsection{Customer Segment Performance}
+The \textbf{Consumer} segment accounts for the majority of total sales, making it the most valuable segment. Average profit per order is also highest for the \textbf{Consumer} and \textbf{Home Office} segments, indicating a profitable customer base.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=\linewidth]{by_customer.JPG}
+    \caption{Sales \& Average Profit by Customer Segment.}
+    \label{fig:img2}
+\end{figure}
+
+% -------- 2. Delivery Performance & Risk Factors --------
+\section{Delivery Performance \& Risk Factors}
+
+\subsection{Geographical Risk}
+Markets such as \textbf{Europe} and \textbf{Pacific Asia} show higher late delivery risk. Certain countries have extremely high levels of delay, suggesting operational or logistics challenges in these regions.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=\linewidth]{by_geography.JPG}
+    \caption{Late Delivery Risk by Market and Country.}
+    \label{fig:img3}
+\end{figure}
+
+\subsection{Shipping Mode Impact}
+\textbf{First Class} and \textbf{Second Class} shipments experience significantly higher late-delivery percentages, while \textbf{Standard Class} and \textbf{Same Day} shipments are comparatively more reliable. Average shipping days increase with lower-priority modes, indicating customer satisfaction can be influenced by mode selection.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=\linewidth]{by_shipping.JPG}
+    \caption{Late Delivery Risk \& Average Shipping Days by Mode.}
+    \label{fig:img5}
+\end{figure}
+
+\subsection{Overall Delay Trends}
+A substantial proportion of shipments arrive delayed rather than on time, highlighting a system-wide performance issue impacting customer experience.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=\linewidth]{by_shipping_delay.JPG}
+    \caption{Distribution of Shipping Delays \& On-Time vs. Delayed Shipments.}
+    \label{fig:img6}
+\end{figure}
+
+% -------- 3. Product & Departmental Performance --------
+\section{Product \& Departmental Performance}
+
+The \textbf{Fan Shop} and \textbf{Apparel} departments generate the highest sales, indicating strong customer demand in these categories. Top-profit products include \textbf{Field \& Stream Sports Gear} and \textbf{Perfect Fitness Equipment}, further supporting the strength of the outdoor and athletic categories.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=\linewidth]{product_and_department_performance.JPG}
+    \caption{Department Sales \& Top Products by Profit.}
+    \label{fig:img8}
+\end{figure}
+
+% -------- 4. Shipping Modes: Profit & Satisfaction --------
+\section{Impact of Shipping Modes on Profit \& Customer Satisfaction}
+
+Shipping mode choice directly affects delivery timeliness and customer satisfaction. \textbf{Same Day} shipping consistently shows the lowest delivery delays, while \textbf{Standard Class} and \textbf{First Class} show higher delivery risks and longer delivery times. Since delays often correlate with lower customer satisfaction and post-purchase return likelihood, optimizing shipping mode selection could improve both customer experience and profitability.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=\linewidth]{by_shipping.JPG}
+    \caption{Shipping Mode impact revisited: Late Risk \& Avg Shipping Days.}
+    \label{fig:img5b}
+\end{figure}
+
+% -------- 5. Fraud & Return Risk --------
+\section{Fraud \& Return Risk Prediction Considerations}
+
+Payment behavior can provide insights into order risk profiles. Orders paid via \textbf{Payment} and \textbf{Debit} methods show higher late-delivery risk, which may correlate to higher return or dispute likelihood. This pattern can be used to train predictive models to flag high-risk orders before fulfillment, reducing losses.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=\linewidth]{payment_type_analysis.JPG}
+    \caption{Payment Type Analysis.}
+    \label{fig:img7}
+\end{figure}
+
+% -------- Conclusion --------
+\section{Conclusion}
+
+The data highlights clear opportunities for strategic improvement:
+
+\begin{table}[H]
+\centering
+\caption{Opportunities and Recommendations}
+\label{tab:opportunities}
+\begin{tabular}{p{0.35\linewidth} p{0.58\linewidth}}
+\toprule
+\textbf{Opportunity Area} & \textbf{Recommendation} \\
+\midrule
+High-Performing Categories \& Regions
+&
+Expand product lines and promotions in \emph{Fishing}, \emph{Camping \& Hiking}, and \emph{European/LATAM} markets. \\
+\addlinespace[2pt]
+Delivery Delays
+&
+Prioritize logistics improvements in high-risk markets and optimize shipping mode selection. \\
+\addlinespace[2pt]
+Customer Value
+&
+Target the \emph{Consumer} and \emph{Home Office} segments with retention and upsell strategies. \\
+\addlinespace[2pt]
+Operational Risk
+&
+Use payment and delivery patterns to build a predictive fraud/return risk model. \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\end{document}
